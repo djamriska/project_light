@@ -1,0 +1,108 @@
+Article	
+	ArticleID
+	Title
+	SourceID
+	Content
+	Article Date
+	Scan Date
+	Author
+	Flag
+	Flag Expire
+	Flag By
+	Flag Date
+
+Comment	
+	LinkedProfileID
+	ProfileID
+	SourceID
+	ArticleID
+	Title
+	Content
+	ParentCommentID
+	Keywords
+	Keyword Score
+	Post Date/Time
+	Scan Date/Time
+	Flag
+	Flag expire
+	Flag By
+	Flag Date
+  
+Profile	
+	Profile ID
+	Discovery Date
+	Ranking
+	Profile Name
+	Real Name
+	Name Confirmed
+	Flag
+
+Source	
+	Source ID
+	Source Name
+	URL
+	xPath for Article
+	xPath for Comment
+	Login
+	password
+
+Source Profile	
+	SourceProfilie
+	ProfileId
+	SourceID
+	ProfileName
+	Scan Date
+	RankScore
+	Flag
+
+Article Keywords	
+	KeywordID
+	Keyword
+	Word or Phrase
+	Effective Date
+	End Date
+	Priority
+	Keyword Type {trigger, person, place, thing}
+	Weight
+
+Comment Keywords	
+	CommentKeywordID
+	Keyword
+	Word or Phrase
+	Weight {1-99}
+	Effective Date
+	End Date
+	Keyword Type {keyword, searchTerm}
+
+Sample Article Keywords	
+	
+Keyword	Value
+Police	1
+Immigrant	1.25
+Lawsuit	0.9
+Trump	1
+Feinstien	1
+Clinton	1
+Arrest	1.2
+Deport	1.3
+
+Sample Comment Keywords	
+Hate	1
+Death	1
+Kill	1
+Jew	1.7
+Deport	1.4
+Illegals	1.5
+Troll	1
+racist	1.2
+racism	1.2
+Trumptards	1.2
+
+SourceProfile Example						
+1000	5455	OCR	DaveJ	11/5/2018	25	Yes
+1309	5455	LATimes	DaveJam	11/8/2018	15	Yes
+1245	3758	OCR	Ayan	11/5/2018	4	No
+3212	9092	OCR	ChienC	11/4/2018	0	No
+						
+ProfileExample						
+5455	11/5/2018	40	DaveJ	Dave Jamriska	Yes	Yes
