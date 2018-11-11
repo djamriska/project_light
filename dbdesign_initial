@@ -24,7 +24,7 @@ Comment
 	ArticleID
 	URL
 	Title
-	Content
+	Comment
 	ParentCommentID
 	Keyword Score Total
 	Post Date/Time
@@ -47,6 +47,7 @@ Profile
 	Profile Name
 	Real Name
 	Name Confirmed
+		Topic_Flags: Flag : Keyword
 		Flag:[] array of flags
 			FlagReasons: [] list of flag reasons
 			FlagExpire
