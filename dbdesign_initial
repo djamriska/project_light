@@ -3,6 +3,7 @@ Article
 	Title
 	SourceID
 	Content
+	URL
 	Article Date
 	Scan Date
 	Author
@@ -21,6 +22,7 @@ Comment
 	ProfileID
 	SourceID
 	ArticleID
+	URL
 	Title
 	Content
 	ParentCommentID
@@ -40,6 +42,7 @@ Comment
 Profile	
 	Profile ID
 	Discovery Date
+	Profile_URL
 	Ranking
 	Profile Name
 	Real Name
