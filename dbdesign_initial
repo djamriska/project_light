@@ -6,10 +6,15 @@ Article
 	Article Date
 	Scan Date
 	Author
-	Flag
-	Flag Expire
-	Flag By
-	Flag Date
+		Flag:[] array of flags
+			FlagReasons: [] list of flag reasons
+			FlagExpire
+			FlagBy
+			FlagDate
+		
+	    	Keywords:[] array of trigger keywords documents and weights
+			keyword
+			weight
 
 Comment	
 	LinkedProfileID
@@ -19,14 +24,18 @@ Comment
 	Title
 	Content
 	ParentCommentID
-	Keywords
-	Keyword Score
+	Keyword Score Total
 	Post Date/Time
 	Scan Date/Time
-	Flag
-	Flag expire
-	Flag By
-	Flag Date
+		Flag:[] array of flags
+			FlagReasons: [] list of flag reasons
+			FlagExpire
+			FlagBy
+			FlagDate
+		
+	    	Keywords:[] array of trigger keywords documents and weights
+			keyword
+			weight
   
 Profile	
 	Profile ID
@@ -35,7 +44,11 @@ Profile
 	Profile Name
 	Real Name
 	Name Confirmed
-	Flag
+		Flag:[] array of flags
+			FlagReasons: [] list of flag reasons
+			FlagExpire
+			FlagBy
+			FlagDate
 
 Source	
 	Source ID
@@ -53,7 +66,11 @@ Source Profile
 	ProfileName
 	Scan Date
 	RankScore
-	Flag
+		Flag:[] array of flags
+			FlagReasons: [] list of flag reasons
+			FlagExpire
+			FlagBy
+			FlagDate
 
 Article Keywords	
 	KeywordID
