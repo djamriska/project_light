@@ -1,7 +1,7 @@
 MongoDB design  - This section focuses on the development of the custom database for the extraction tools based on the MongoDB noSQL datbase tool.  Database definitions are documented in another document.  (Ayan) (2)
 Develop sample data - Used to prototype and validate the database design while concurrent team member activies can occur. (Dave/Ayan) (2)
-Comment Keyword Maintenance - Simple screens/ scripts to allow the creation and update of MongoDB document collections.  Includes CRUD functions. (Ayan) (5)
-Article Keyword Maintenance - Simple screens/scripts to allow hte creation and update of MongoDB document collections for articles.  Includes all CRUD operations. (Ayan) (4)
+Comment Keyword Maintenance - Simple screens/ scripts to allow the creation and update of MongoDB document collections.  Includes CRUD functions. (Ayan) (5) - This contains the hate speech and weight for each term.
+Article Filter Maintenance - Simple screens/scripts to allow hte creation and update of MongoDB document collections for articles.  Includes all CRUD operations. (Ayan) (4) - these are the filters to determine if an article's comemnts section is scanned.
 Source Maintenance - Simple screens/scripts to allow the creation and update of MongoDB document collections for sources.  Includes the ability to update XPATH statements for extraction. (Ayan) (4)
 Article Extraction - Uses scrapy to extract articles from the target website.  At this time all articles are extracted and input into the document collection for Articles. (Dave) (12)
 Comment Extraction - Uses scrapy to extract comments from the target website.  At this time all comments are extracted and input into the document collection. (Dave) (10)
