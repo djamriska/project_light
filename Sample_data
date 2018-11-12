@@ -1,0 +1,203 @@
+MongoDB Database Defintions
+
+show dbs
+Use dataScraper
+
+db.websource.insertOne(
+    {"_id":"OCR",
+    "Source_Name": "OC Register",
+    "URL": "ocregister.com",
+    "xPath_Articles": "H1/",
+    "xPath_Comments": "H3/",
+    "login": "djam",
+    "password": "12345"
+    }
+)
+
+db.websource.insertOne(
+    {"_id":"OCW",
+    "Source_Name": "OC Weekly",
+    "URL": "ocweekly.com",
+    "xPath_Articles": "H1/",
+    "xPath_Comments": "H3/",
+    "login": "djam",
+    "password": "12345"
+    }
+)
+
+db.articles.insertOne(
+    {     
+        "_id:": "OCR1",
+        "Title":"Woolsey fire is 10% contained; Brown seeks federal disaster relief",
+        SourceID: "OCR",
+        "ArticleContent": "The Woolsey fire that burned 83,275 acres in Los Angeles and Ventura counties, claimed two lives and injured three firefighters was declared 10 percent contained on Sunday morning as firefighters said rising Santa Ana winds present new threats. Officials urged residents to evacuate, especially in the Topanga Canyon area, while a Malibu city councilman who lost his home was reported injured and being treated in an intensive care unit, according to a fellow council member.  The only thing we’re not concerned about is the ocean,  Los Angeles County Fire Chief Daryl L. Osby said at a morning news conference -We have 10 percent containment, which means we have 90 percent open line,Osby said. We have a lot of hot spots within the incident. Osby said the Santa Ana winds were expected to peak at 40 mph in the fire area, and last for three days. Firefighters said the winds could make drops from air tankers and helicopters less effective. And even as officials spoke at the news conference, there was a wind-driven flare-up in West Hills, sparking spot fires in the area of Arminta Street. Firefighters jumped into fire-protection mode, and aerial drops began, even dropping on firefighters who were working in backyards of homes in the area. ",
+        "URL":"https://www.ocregister.com/2018/11/11/woolsey-fire-is-10-contained-brown-seeks-federal-disaster-relief/",
+        "Article_Date": 11/10/2018,
+        "Scan_Date": 11/11/2018,
+        "Author": " RICHARD K. DE ATLEY",
+        "Flag":[{FlagBy:"David Jamriska", FlagReason:"Threats against Persons", FlagExpire:"11/30/2018"}, {FlagBy:"David Jamriska", FlagReason:"Threats against Public Leader(s)", FlagExpire:"11/30/2018"}],
+        "Keywords":[{Keyword: "Brown", Weight:4},{Keyword: "Trump", Weight:2}],
+        }
+)
+
+db.articles.insertOne(
+    {     
+        "_id:": "OCR2",
+        "Title":"AP calls Harley Rouda winner in race against Dana Rohrabacher",
+        "ArticleContent": "Democrat Harley Rouda won the seat long held by Republican Orange County Congressman Dana Rohrabacher, The Associated Press reported late Saturday afternoon. The APs race call is based on the statistical probability of Rouda maintaining the lead in the race as the remaining general election ballots are counted.  Earlier in the day, Rouda declared his own victory over the Costa Mesa congressman, who has served the coastal district for some 30 years.  But Rohrabachers campaign did not concede, noting there are more than 300,000 ballots countywide that have yet to be counted. In e-mails before and after the AP race call, Dale Neugebauer, Rohrabachers campaign spokesman, said that the tally is too close to comment on until a final count is in“There are still more than 300,000 ballots remaining to count.  Our volunteer observers are at the Registrar of voters observing that process.  We will have additional comment once the count is complete.” The 48th Congressional District seat became one of the most competitive and expensive races in the nation. Rohrabacher was targeted by Democrats as a vulnerable candidate whose seat could be flipped blue in what has traditionally been a solid Republican district.  The Associated Press declared Rouda the winner at 5:36 p.m. Saturday, shortly after the Orange County Registrar of Voters posted its last update of the day.  Rouda, a Laguna Beach real estate executive, was leading Rohrabacher with 109,591 votes, or 52 percent, to Rohrabachers 101,081 votes or 48 percent, according to the latest Orange County Registrar of Voters unofficial results update.",
+        "SourceID": "OCR",
+       "URL":"https://www.ocregister.com/2018/11/10/harley-rouda-declares-victory-over-longtime-rep-dana-rohrabacher-but-many-votes-yet-to-be-counted/",
+        "Article_Date": 11/10/2018,
+        "Scan_Date": 11/11/2018,
+        "Author": "ROXANA KOPETMAN"
+        }
+)
+
+db.articles.insertOne(
+    {     
+        "_id:": "OCR3",
+        "Title":"Parolee spotted on Ring doorbell stealing package, wanted female victim to take a shower, police say",
+        "ArticleContent": "GARDEN GROVE – A transient parolee was spotted on a Ring doorbell camera stealing a package from a porch, then tried to convince a female inside the home to take a shower, police said.Donald Mayberry, 39, fled the scene but was later was found and arrested, said Garden Grove Police Sgt. M. Lord. The owner of the residence was watching through his Ring camera and saw a suspect steal a package from the front porch,” Lord said. “The suspect returned a few minutes later and entered the residence while a female resident was lying on her bed inside.” he man tried to convince her to take a shower, but she refused, Lord said.The suspect ran from the home in the 12500 block of Fieldstone Lane after the victims mother came home and found him in her daughters bedroom on Saturday at about 12:45 p.m., Lord said. The man claimed to be from Amazon and said he was just talking with the victim. Then he fled, according to police. bout an hour later, officers were responded to a call from the 6500 block of Chapman Avenue about a person who jumped into a backyard. He was detained nearby and identified as the suspect in the burglary on Fieldstone Lane. Mayberry is a transient and parolee from the Los Angeles area, police said. He and was booked into the Orange County jail.",
+        "URL":"https://www.ocregister.com/2018/11/11/parolee-spotted-on-ring-doorbell-stealing-package-wanted-female-victim-to-take-a-shower-police-say/",
+        "Article_Date": 11/10/2018,
+        "Scan_Date": 11/11/2018,
+        "Author": "ROXANA KOPETMAN",
+        "Keywords":[{Keyword: "Parolee", Weight:5}, {Keyword: "stealing", Weight:5}, {Keyword: "victim", Weight:7}]
+        }
+)
+
+db.articles.insertOne(
+    {     
+        "_id:": "OCR6",
+        "Title":"Nearly 34,000 Orange County inmates calls to attorneys recorded, not the 1,079 originally reported",
+        "SourceID": "OCR",
+        "ArticleContent": "Nearly 34,000 inmate phone calls to their attorneys were recorded, and the Orange County Sheriffs Department accessed calls 347",
+        "URL":"https://www.ocregister.com/2018/11/11/parolee-spotted-on-ring-doorbell-stealing-package-wanted-female-victim-to-take-a-shower-police-say/",
+        "Article_Date": 11/10/2018,
+        "Scan_Date": 11/11/2018,
+        "Author": "ROXANA KOPETMAN",
+        "Keywords":[{Keyword: "Sheriff",Weight: 3}, {Keyword:"inmate", Weight:4},{Keyword:"attorneys", Weight:1}]
+        }
+)
+
+db.profile.insertOne(
+    {
+        _id: "Antarez_OCR",
+        Profile: "Antarez",
+        Discovery_Date: 11/11/2018,
+        Profile_URL: "https://disqus.com/by/disqus_QPtJmfAZfU/",
+        Ranking: 0,
+        Real_Name: "Unknown",
+        Name_Confirmed: 0,
+        Topic_Flags : [{Flag:"Race"},{Flag:"Political"},{Flag:"Gender Identity"}]
+    }
+)
+
+db.profile.insertOne(
+    {
+        _id: "LFOldTimer_OCR",
+        Profile: "LFOldTimer",
+        Discovery_Date: 11/11/2018,
+        Profile_URL: "https://disqus.com/by/disqus_QPtJmfAZfU/",
+        Ranking: 0,
+        Real_Name: "Unknown",
+        Name_Confirmed: 0,
+        Topic_Flags : [{Flag:"Race"},{Flag:"Political"},{Flag:"Gender Identity"}]
+    }
+)
+
+db.profile.insertOne(
+    {
+        _id: "californiaguy76_OCR",
+        Profile: "californiaguy76",
+        Discovery_Date: 11/11/2018,
+        Profile_URL: "https://disqus.com/by/disqus_QPtJmfAZfU/",
+        Ranking: 0,
+        Real_Name: "Unknown",
+        Name_Confirmed: 0,
+        Topic_Flags : [{Flag:"Race"},{Flag:"Political"},{Flag:"Gender Identity"}]
+    }
+)
+
+db.profile.insertOne(
+    {
+        _id: "Afra_OCR",
+        Profile: "Afra",
+        Discovery_Date: 11/11/2018,
+        Profile_URL: "https://disqus.com/by/disqus_QPtJmfAZfU/",
+        Ranking: 0,
+        Real_Name: "Unknown",
+        Name_Confirmed: 0,
+        Topic_Flags : [{Flag:"Race"},{Flag:"Anti Police"}]
+    }
+)
+
+db.profile.insertOne(
+    {
+        _id: "Brenda_OCR",
+        Profile: "Brenda",
+        Discovery_Date: 11/11/2018,
+        Profile_URL: "https://disqus.com/by/disqus_QPtJmfAZfU/",
+        Ranking: 0,
+        Real_Name: "Unknown",
+        Name_Confirmed: 0,
+        Topic_Flags : []
+    }
+)
+
+db.comments.insertOne(
+    {
+        Profile_Id:  "Antarez_OCR",
+        Source_Id:   "OCR",
+        Article_Id:   "OCR3",
+        Title: "a",
+        Comment: "Mensarino should give his Tinder dates more money so they dont have to steal to survive.",
+        Keyword_Score_Total: 11,
+        Post_Date: 11/11/2018,
+        Scan_Date: 11/11/2018,
+        Flags: [{Flagby:"David Jamriska",Flag_Date:11/11/2018,Flag_Expire:11/30/2018,FlagReason:"Personal Attack"}],
+      Keywords: [{Keyword:"Steal", Weight: 2},{Keyword:"Tinder", Weight: 1}]
+    }
+)
+
+db.comments.insertOne(
+    {
+        Profile_Id:  "Afra_OCR",
+        Source_Id:   "OCR",
+        Article_Id:   "OCR3",
+        Title: "a",
+        Comment: "Simply crazy. He walked in? After she observed him stealing? Looking the way he looks? Try again..",
+        Keyword_Score_Total: 11,
+        Post_Date: 11/11/2018,
+        Scan_Date: 11/11/2018,
+        Keywords: [{Keyword:"Stealing", Weight: 2}]
+    }
+)
+
+db.comments.insertOne(
+    {
+        Profile_Id:  "LFOldTimer_OCR",
+        Source_Id:   "OCR",
+        Article_Id:   "OCR4",
+        Title: "a",
+        Comment: "Now that Spitzer is the top prosecutor look at him backpedal. lol. But boy, he sure talked tough before he was elected DA. Didn't he? It's already starting. Sure didn't take long. Naturally, the appropriate thing for Todd to say is that he is disgusted at attorney-client privilege and the sacred US Constitution being violated so handily and, if done intentionally, would hold those responsible fully accountable for their egregious acts. Don't hold your breath! Todd doesn't have to pretend anymore. He already got your votes and a guaranteed job for the next 6 years! Say bye to the old boss. Say hi to the new boss. The more things change the more they stay the same!!! Told ya so!!!",
+        Keyword_Score_Total: 0,
+        Post_Date: 11/11/2018,
+        Scan_Date: 11/11/2018,
+        Keywords: [{Keyword:"Spitzer", Weight: 2}, {Keyword:"prosecutor", Weight: 1}]
+    }
+)
+
+db.comments.insertOne(
+    {
+        Profile_Id:  "california76_OCR",
+        Source_Id:   "OCR",
+        Article_Id:   "OCR3",
+        Title: "a",
+        Comment: "O.c. sheriffs dept is a criminal organization. Once Spitzer gets in there, he'll just adopt the same dirty ways as rackauckas. I voted for Spitzer, with the only hope that there's a chance he will value obeying the law and not create a culture where illegal actions by deputies or prosecutors is winked at and passively condoned.?",
+        Keyword_Score_Total: 0,
+        Post_Date: 11/11/2018,
+        Scan_Date: 11/11/2018,
+        Keywords: [{Keyword:"Sheriff", Weight: 2}, {Keyword:"criminal", Weight: 1}, {Keyword:"illegal", Weight: 1}]
+    }
+)
