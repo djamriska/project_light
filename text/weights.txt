@@ -1,0 +1,1 @@
+{'race':120, 'hate':120, 'kill':260, 'black':180, 'trump': 125, 'ayan': 120, 'chien':140 }

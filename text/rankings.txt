@@ -1,0 +1,1 @@
+{"Rankings": [{"docId": "75", "Score": 35.9}, {"docId": "23", "Score": 33.97}, {"docId": "39", "Score": 28.78}, {"docId": "3200", "Score": 17.5}, {"docId": "3189", "Score": 16.42}, {"docId": "hate", "Score": 12.43}, {"docId": "race", "Score": 10.24}, {"docId": "3187", "Score": 7.49}, {"docId": "3183", "Score": 6.52}]}

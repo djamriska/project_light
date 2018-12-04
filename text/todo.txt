@@ -1,0 +1,46 @@
+Reference
+    https://github.com/nhirakawa/BM25/tree/master/src
+
+HTML Site
+    Finish HTML website
+    Read in results file https://www.w3schools.com/js/js_json_html.asp
+    Change front end to allow maintenance of keywords
+    change front end to allow maintenance of article filters
+    change front end to allow maintenance of keyword weights
+    Writeup directions on how to use application (Dave)
+    Figure out how to run python programs from website button (Dave)
+    Consider building some visualization (Ayan)
+
+
+Ranker App
+    implement changes to read JSON data sources instead of flat files
+    Write results out a JSON file, need to figure out format
+    Figure out the formula on how to apply weights
+    Write output and JSON containing Rank Score, New Score, Terms, Link to Original Article, Article Date, Comment Count
+    Look into computing P/R for the application
+
+Profile linking
+    Figure out if we can implement the similarity rules on comments
+
+Data Sources
+    convert corpus to JSON
+    convert Keywords to JSON
+    convert queries to JSON
+    convert weights to JSON
+
+Scrapper App
+    Scrape comments to JSON (one file per article)
+    Scrape articles to JSON (one per file)
+
+
+App Config
+    setup K and b as parameters
+
+
+Installation Files
+    build requirements.txt
+
+Presentation
+    build powerpoint
+    create spoken powerpoint component
+
