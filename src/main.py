@@ -40,7 +40,9 @@ def main():
 		for i in sorted_x[:100]:
 			tmp = (qid, i[0], index, i[1])
 			# todo: add lookup to the original article and add to output
-			print('{:>1}\tQ0\t{:>4}\t{:>2}\t{:>12}\tNH-BM25'.format(*tmp))
+			# print('{:>1}\tQ0\t{:>4}\t{:>2}\t{:>12}\tNH-BM25'.format(*tmp))
+			# todo: change this to CSV out
+			# todo: add title, both ranking scores, url, date, # of comments
 			data['Rankings'].append({'docId': i[0], 'Score': i[1]})
 			# print(articles.get('78'))
 			# todo: add ability to write this information out to a data file
@@ -48,8 +50,9 @@ def main():
 			# todo: we may want to set this up as a panda's data frame to merge with files
 			index += 1
 		qid += 1
-	with open('../text/rankings.txt', 'w') as outfile:
-		json.dump(data, outfile)
+	# todo: change this to CSV out
+	# with open('../text/rankings.txt', 'w') as outfile:
+	#	json.dump(data, outfile)
 # todo: setup the ability to pass K and b in as paramters
 
 

@@ -74,7 +74,7 @@ class ArticleParser:
 	def __init__(self, filename):
 		self.filename = filename
 		self.regex = re.compile('^#\s*\d+')
-		self.articles = []
+		self.articles = dict()
 
 	def parse(self):
 		with open(self.filename) as f:
@@ -84,11 +84,13 @@ class ArticleParser:
 		for x in blobs:
 			text = x.split(',')
 			text = [x.strip(' ') for x in text]
-			# print('text: {0}'.format(text))
-			# docid = text.pop(0)
-			docid = text[0]
-			text_out = {'docid': docid, 'article_info': text}
-
+			#print('text: {0}'.format(text))
+			docid = text.pop(0)
+			title = text.pop(0)
+			source = text.pop(0)
+			pub_date = text.pop(0)
+			pub_url = text.pop(0)
+			text_out = {'docid': docid, 'title': title, 'source': source, "pub_date": pub_date, "pub_url": pub_url}
 			self.articles.append(text_out)
 
 	def get_articles(self):
