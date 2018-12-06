@@ -69,29 +69,33 @@ class KeywordParser:
 	def get_keywords(self):
 		return self.keywords
 
+
 class ArticleParser:
 
 	def __init__(self, filename):
 		self.filename = filename
 		self.regex = re.compile('^#\s*\d+')
-		self.articles = dict()
+		self.articles = {}
 
 	def parse(self):
 		with open(self.filename) as f:
 			s = ''.join(f.readlines())
 		blobs = s.split('##')[1:]
-
+		work_dict = {}
 		for x in blobs:
 			text = x.split(',')
 			text = [x.strip(' ') for x in text]
 			#print('text: {0}'.format(text))
-			docid = text.pop(0)
+			docid = int(text.pop(0))
 			title = text.pop(0)
 			source = text.pop(0)
-			pub_date = text.pop(0)
-			pub_url = text.pop(0)
-			text_out = {'docid': docid, 'title': title, 'source': source, "pub_date": pub_date, "pub_url": pub_url}
-			self.articles.append(text_out)
+			# pub_date = text.pop(0)
+			# pub_url = text.pop(0)
+			work_dict[docid] = {}
+			work_dict[docid]['title'] = title
+			work_dict[docid]['source'] = source
+			self.articles[docid] = work_dict
+
 
 	def get_articles(self):
 		return self.articles

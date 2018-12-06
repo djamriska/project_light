@@ -24,9 +24,13 @@ def main():
 	keywords = kw.get_keywords()
 	ar.parse()
 	articles = ar.get_articles()
-	for article in articles:
-		print(article)
+	#for article in articles:
+	#	print(articles[article])
 
+	print(articles[1][1]['title'])
+	print(articles[2][2]['title'])
+
+	#print(articles)
 
 	proc = QueryProcessor(queries, corpus, keywords)
 	results = proc.run()
