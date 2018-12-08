@@ -18,10 +18,10 @@ def score_BM25(weight, n, f, qf, r, N, dl, avdl):
 	original = round(first*second*third, 2)
 
 	upgraded = round(first*second*third+log(1+(weight*log(1+f, 2)), 2), 2)  # todo: discuss what this value to be
-	print('\t \tOriginal: {0}'.format(original))
-	print(log(1+(weight*log(1+f, 2)), 2))
-	print('\t \tUpgraded: {0}'.format(upgraded))
-	print('')
+	# print('\t \tOriginal: {0}'.format(original))
+	# print(log(1+(weight*log(1+f, 2)), 2))
+	# print('\t \tUpgraded: {0}'.format(upgraded))
+	# print('')
 	return upgraded
 
 
