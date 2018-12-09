@@ -113,7 +113,7 @@ class ArticleParser:
 				pub_date = text.pop(0)
 				pub_url = text.pop(0)
 				# work_dict = {}
-				work_dict[docid] = {"title": title, "source": source, "pub_date": pub_date }
+				work_dict[docid] = {"title": title, "source": source, "pub_date": pub_date, "pub_url": pub_url}
 				self.articles = work_dict
 
 	def get_articles(self):
