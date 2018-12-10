@@ -18,12 +18,18 @@ def main():
     cp = CorpusParser(filename='../text/comments.txt')
     kw = KeywordParser(filename='../text/weights.txt')
     ar = ArticleParser(filename='../text/articles.txt')
+    kwt = KeywordTypeParser(filename='../text/hatetype.txt')
     qp.parse()
     queries = qp.get_queries()
+
     cp.parse()
     corpus = cp.get_corpus()
+
     kw.parse()
     keywords = kw.get_keywords()
+
+    kwt.parse()
+    keyword_types = kwt.get_keywords()
     ar.parse()
     articles = ar.get_articles()
     proc = QueryProcessor(queries, corpus, keywords)
