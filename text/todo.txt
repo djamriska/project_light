@@ -3,32 +3,24 @@ Reference
 
 HTML Site
     Finish HTML website
-    Read in results file https://www.w3schools.com/js/js_json_html.asp
     Change front end to allow maintenance of keywords
     change front end to allow maintenance of article filters
     change front end to allow maintenance of keyword weights
     Writeup directions on how to use application (Dave)
     Figure out how to run python programs from website button (Dave)
     Consider building some visualization (Ayan)
-
+    Results page should show query and weights applied
 
 Ranker App
-    implement changes to read JSON data sources instead of flat files
-    Write results out a JSON file, need to figure out format
-    Figure out the formula on how to apply weights
-    Write output and JSON containing Rank Score, New Score, Terms, Link to Original Article, Article Date, Comment Count
+    look at adjusting the formula to not punish TF so much
     Look into computing P/R for the application
+    how do we prove it works - against a set known population, cranfield like
+    `1 - 3
+     2  - 5
+     3   6.5
+     4  7.5
 
-Profile linking
-    Figure out if we can implement the similarity rules on comments
-
-Data Sources
-    convert corpus to JSON
-    convert Keywords to JSON
-    convert queries to JSON
-    convert weights to JSON
-
-Scrapper App
+Scrapper App (on hold)
     Scrape comments to JSON (one file per article)
     Scrape articles to JSON (one per file)
 
@@ -36,11 +28,27 @@ Scrapper App
 App Config
     setup K and b as parameters
 
-
 Installation Files
     build requirements.txt
 
 Presentation
     build powerpoint
     create spoken powerpoint component
+    multiple weights file, base = all eq 100 and then custom rankings for different types
+Multiple query files = specific terms, racial, gender, person specific
+
+website - presentation, install and how to operate website
+Website - results presentation
+Website - extra charts (option)
+
+Research paper
+    send document to TA on request
+
+
+
+output of keyword types
+
+
+optional items
+increase size of document population
 
