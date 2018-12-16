@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>BM 25 Customization</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Project Light</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+                            <li class="active"><a href="Matching.html">Our Story</a></li>
+							<li ><a href="HowtoInstall.html">How to Install</a></li>
+							<li><a href="index.html">Project Light</a></li>
+							<li><a href="Results.html">Search Results</a></li>
+							<li><a href="keyword.html">Keywords</a></li>
+                        	
+							<li><a href="References.html">References</a></li>
+							<li><a href="https://github.com/djamriska/project_light">GitHub</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 16, 2018</span>
+									<h1>Okapi BM25  <br/>
+									</h1>
+									<p>This project was a required a custom implementation of a search and ranking algorithm.  t.<br />
+								.</p>
+								</header>
+								<p><h3>                                 
+                                    Overview :  </h3> 
+<p>As a part of our project we have chosen the BM25 algorithm developed by Nick Hirakawa  https://github.com/nhirakawa/BM25 as a Python implementation of the BM25 ranking algorithm. This algorithm is used to retrieve query words from documents in the corpus based on the BM25 scores of the documents. </p>
+
+<h3>BM25 algorithm: </h3>
+                                <p>
+In this section I will give an overview of the BM25 algorithms. There are many variants of BM25, such as BM25F, BM25L, and BM25+ etc.  In general, a standard BM25 algorithm consists of three parts: the query frequency (QF), term frequency (TF) and inverted document frequency (IDF). The ranking function for a given query q and document D can be written as the product of the three:</p><br />
+
+<p><b>Score(q,D)=QF * TF * IDF</b> </p>
+
+<p>More details will be discussed in the raking function section.</p>
+
+
+<h3>What’s in the software?</h3>
+                                <p>
+There are three folders, src, text and test. The main classes and functions are stored in src. The folder “text” contains queries in “queries.txt” and documents in “corpus.txt”. The default files contains 7 queries in queries.txt and 3204 articles in corpus.txt. Below are descriptions of the 4 main modules of the program:</p><br />
+
+<p><h3>Parser:</h3> this is carried out by parse.py in src folder. The parser module parses the query file to generate a list using QueryParser(filename='../text/queries.txt'). 
+It also parses the corpus file to produce a dictionary using CorpusParser(filename='../text/corpus.txt')</p>
+
+<h3>Query processor:</h3> <p>this is done by query.py in src folder. It contains a class QueryProcessor(). The query processor takes each query in the query list and scores the documents based on the terms. For example, QueryProcessor(queries, corpus) returns a python dictionary which contains score of BM25 for each document in corpus for each query in queries.</p>
+
+<h3>Ranking function:</h3> <p>The ranking function is an implementation of the BM25 ranking function; it uses the natural logarithm in its calculations. In its most general form, the ranking function for a given query q and document D is:
+Score(q,D)=QF * TF * IDF</p><br />
+<br />
+<p>With <br />
+<br />
+QF=((k2 + 1)q)/((k2 + q)),<br />
+TF= ((k1 + 1)f)/((K + f)) and<br />
+IDF= log((r + 0.5)(N − n − R + r + 0.5))/((n − r + 0.5)(R − r + 0.5)), <br /><br />
+where QF, TF, and IDF stand for the query frequency, term frequency, and inverse document frequency, respectively. The parameters are defined as follows:<br /><br />
+•	k1 and k2 are constants,<br />
+•	q is the query frequency,<br />
+•	f is the document frequency,<br />
+•	n is the number of documents in the collection indexed by this term,<br />
+•	N is the total number of documents in the collection,<br />
+•	r is the number of relevant documents indexed by this term,<br />
+•	R is the total number of relevant documents,<br />
+•	L is the normalized document length (i.e. the length of this document divided by the average length of documents in the collection).<br />
+•	K = k1(b*L + (1 − b)) with b is a model parameter ranging between 0 and 1<br /><br />
+The default choice of parameters in the software is k1 = 1.2, k2 = 100, b=0.75, r=0 and R=0.<br /><br />
+Putting them together Score(q,D) can be written as,<br /><br />
+Score(q,D)=((k2 + 1)q)/((k2 + q)) * ((k1 + 1)f)/((K + f)) * log((r + 0.5)(N − n − R + r + 0.5))/((n − r + 0.5)(R − r + 0.5)) <br /><br />
+                        
+<p>There are several variant of BM25. If b=1 it is called BM11 and if b=0 it gives rise to BM15. Another interesting variant, BM25L, adds an additional parameter, delta, to f/(bL + (1 − b)) to avoid over penalizing long documents. BM25+, another extension of BM25, adds a free parameter to TF to address one deficiency of the standard BM25 in which the component of term frequency normalization by document length is not properly lower-bounded. BM25F is a version of BM25 in which document structure and anchor text are taken into account (for example headlines, anchor text and main text) with possibly different length normalization, term relevance saturation, and degrees of importance.</p>
+                        <br /> <br />
+                        <h3>Data structures: </h3> <p>The data structures module contains an inverted index and a document length table. The inverted index uses a dictionary to map each word to a dictionary. This secondary dictionary maps each document id to the word frequency in the outer dictionary. The document length table contains the length of each document, and also has a function to calculate the average document length of the collection. </p>
+<br />    
+<p>Invdx.py contains a class InvertedIndex(), which indexes the documents in the corpus and DocumentLengthTable(), which return length for a given document id. They are used by the function build_data_structures(corpus), which returns index and document length table for documents in the corpus.</p>
+
+<h3>  Master file:</h3>
+<p>The master file is called main.py. It calls the classes and functions mentioned above and outputs results in the format below:</p><br />
+<pre>QID              doc ID  ranking   BM25 scores </pre> <br />
+<pre>0	Q0	3127	 0	15.0171220363	NH-BM25<br />
+0	Q0	2246	 1	11.7526887784	NH-BM25<br />
+0	Q0	1930	 2	9.6465673007	NH-BM25<br />
+0	Q0	3196	 3	9.36047694133	NH-BM25<br />
+0	Q0	2593	 4	6.51437851269	NH-BM25<br />
+0	Q0	1591	 5	5.60962902438	NH-BM25<br />
+…
+…
+6	Q0	1811	 0	13.2740778194	NH-BM25<br />
+6	Q0	2967	 1	11.7206522846	NH-BM25<br />
+6	Q0	2714	 2	11.496634539	NH-BM25<br />
+6	Q0	2973	 3	11.3242660893	NH-BM25<br />
+6	Q0	3156	 4	11.0503299552	NH-BM25<br />
+6	Q0	3075	 5	10.6248232001	NH-BM25<br />
+6	Q0	2664	 6	10.5875015187	NH-BM25<br />
+6	Q0	2114	 7	10.1316715033	NH-BM25<br />
+6	Q0	 891	 8	9.5558268556   	NH-BM25<br />
+6	Q0	2288	 9	9.52042175582	NH-BM25<br /></pre>
+
+                                
+<p>The first, third and fourth columns correspond to the query ID, document ID, and ranking, respectively. Note that the query ID 
+and ranking start with 0.  The fifth column shows the BM25 scores of the corresponding documents. </p>
+
+<h3>How to use this algorithm:</h3>
+                                
+<p>Go to https://github.com/nhirakawa/BM25 and download the zip file. Unzip the file.<br />
+To run, simply run “python main.py” in the src folder.</p><br />
+
+                                <h3>Incorporating the algorithm into our project:  </h3>
+<p>The flexibility of the code allows us to adapt it for our need. The purpose of our project is to search for hate keywords in the corpus using BM25 ranking algorithm. We have also applied different weight for each query term. Note that it is also possible to use implement this using other existing software such as metapy. However, we found that it’s much easier to build our project on top of this software we introduce here, since it allows us to include query weight easily. 
+The query frequency for us is always 1, in addition we introduce the weight for each query terms to denote the importance (interest) of each individual query term. As a result, we have replace ((k3 + 1)q)/((k3 + q)) by qweight, where qweight represents the query weight.<br />
+Score(qweight,D)= qweight* ((k1 + 1)f)/((K + f)) * log((r + 0.5)(N − n − R + r + 0.5))/((n − r + 0.5)(R − r + 0.5))<br /><br />
+
+Our choice of parameters are k1=100, b=0.5, r=0  and R=0.<br />
+Note that since our query words contain only keywords of hate speeches with no common words such as “the” or  “a”. As a result, it’s not necessary to implement the sublinear transformation of the term frequency, which is often used to suppress those common words. Therefore, here we choose k1 to be a large value, such that it is close to the linear transformation.
+</p>
+<h3>Missing piece: </h3>
+                                
+<p>Although the score function is the function of query frequency, the code itself doesn’t include any functions for it. This can be easily improved for example using build_data_structures() in Invdx.py  to obtain indices and frequency of queries. However, This implementation is already sufficient for us since we only include keywords of hate speech as query terms, where every query only appear once.  We use query weight to account for the importance of the query terms. As such, we didn’t develop further in this direction. <br /></p>
+<h3>Conclusion : </h3>
+<p>Overall this BM25 algorithm was a fascinating starting point for our project. This software provides necessary classes and functions for text retrieval tasks.  The four core modules of the program: parser, query processor, ranking function, and data structures are used for indexing raw documents, parsing the query file and the corpus file to produce a list or a dictionary, and using the BM25 ranking function for text retrieval tasks. The code is easy to use and modify. Once can construct more complicated text retrieval models on top of it. </p>
+<br />
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+                            
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
