@@ -10,3 +10,4 @@ The application runs behind the scenes against a collection of articles and asso
 
 Currently the application comes preconfigured to run against a set of articles and comments that have been scrapped from the web to allow the user to test the function
 
+Please view our github.io site https://djamriska.github.io/
