@@ -1,4 +1,3 @@
-__author__ = 'Nick Hirakawa'
 
 # todo: figure out how to credit original program to the author
 # todo: figure out all required modules and build a requirements.txt
@@ -6,19 +5,28 @@ __author__ = 'Nick Hirakawa'
 from parse import *
 from query import QueryProcessor
 import operator
+import datetime
 import json
 import csv
+import sys
 
 
 def main():
-    # todo: change this to read in from a database
-    # todo: design new database structure to store this information
+    # qp = QueryParser(filename='../text/queries.txt')
+    # cp = CorpusParser(filename='../text/corpus.txt')
+    # cp = CorpusParser(filename='../text/comments.txt')
+    # kw = KeywordParser(filename='../text/'+sys.argv[1])
+    # ar = ArticleParser(filename='../text/articles.txt')
+    # kwt = KeywordTypeParser(filename='../text/hatetype.txt')
+
+    run_results_file = '../results/run_results.txt'  # this is the file used to write master activity
     qp = QueryParser(filename='../text/queries.txt')
-    cp = CorpusParser(filename='../text/corpus.txt')
     cp = CorpusParser(filename='../text/comments.txt')
-    kw = KeywordParser(filename='../text/weights.txt')
+    kw = KeywordParser(filename='../text/weights-chen.txt')
     ar = ArticleParser(filename='../text/articles.txt')
     kwt = KeywordTypeParser(filename='../text/hatetype.txt')
+
+
     qp.parse()
     queries = qp.get_queries()
 
@@ -30,15 +38,17 @@ def main():
 
     kwt.parse()
     keyword_types = kwt.get_keywords()
+
     ar.parse()
     articles = ar.get_articles()
-    proc = QueryProcessor(queries, corpus, keywords)
+    run_date = datetime.datetime.now()
+
+
+    proc = QueryProcessor(queries, corpus, keywords, keyword_types, run_date, run_results_file, articles)
     results = proc.run()
     qid = 0
     data = {}
-    csv_columns = 'docid, rank_score, bm25_custom, title, source, pub_date, pub_url\n'
-    with open('../text/rankings.csv', 'w') as f:
-        f.write(csv_columns)
+
     for result in results:
         sorted_x = sorted(result.items(), key=operator.itemgetter(1))
         sorted_x.reverse()
@@ -57,10 +67,11 @@ def main():
             source = articles[int(i[0])]['source'].rstrip()
             data.update({'docId': i[0], 'rank_score': j, 'Score': score, 'source': source, 'title': title,
             						'pub_date': pub_date})
-            out_string = docid + ', ' + str(j) + ', '+str(round(score,4))+', "' + title + '", "' + source + '", "'+pub_date + '", "' + pub_url + '"\n'
-            with open('../text/rankings.csv', 'a') as f:
-                f.write(out_string)
-            # todo: create process to read in file and display on website
+
+            out_string = docid + ', ' + str(j) + ', '+str(round(score, 4))+', "' + title + '", "' + source + '", "'+pub_date + '", "' + pub_url
+            print(out_string)
+           # with open('../results/rankings.csv', 'a') as f:
+           #     f.write(out_string)
             index += 1
         qid += 1
     # todo: setup the ability to pass K and b in as paramters

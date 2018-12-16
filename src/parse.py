@@ -1,8 +1,7 @@
-__author__ = 'Nick Hirakawa'
 
 import re
 from ast import literal_eval
-import metapy
+
 
 # read in comments for analysis
 class CorpusParser:
@@ -24,7 +23,7 @@ class CorpusParser:
 			# todo: perform stemming
 			# todo: add in min / max word sizes
 
-			print('text: {0}'.format(text))
+			# print('text: {0}'.format(text))
 			docid = text.pop(0)
 			self.corpus[docid] = text
 
@@ -57,7 +56,7 @@ class KeywordParser:
 		with open(self.filename) as f:
 			lines = ''.join(f.readlines())
 		kw = literal_eval(lines)
-		print("==keywords weights ===")
+		#print("==keywords weights ===")
 
 		for key, value in kw.items():
 			value = round(value/100, 3)
@@ -79,10 +78,10 @@ class KeywordTypeParser:
 		with open(self.filename) as f:
 			lines = ''.join(f.readlines())
 		kwt = literal_eval(lines)
-		print("==keywords types ===")
+		#print("==keywords types ===")
 
 		#for key, value in kwt.items():
-		#	print(key, value)
+			#print(key, value)
 		# print('')
 		self.keywords_types = kwt
 
@@ -121,4 +120,4 @@ class ArticleParser:
 
 if __name__ == '__main__':
 	qp = QueryParser('text/queries.txt')
-	print(qp.get_queries())
+	#print(qp.get_queries())
