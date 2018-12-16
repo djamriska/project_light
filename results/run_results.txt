@@ -1,0 +1,49 @@
+Date,Query,ResultsLink,Max,Terms,DocCount,QueryTerms
+15 December 201816:33:16, Q1,http://localhost:8000/rankresults.html?../20181215163316Q1/20181215163316Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201816:33:16, Q2,http://localhost:8000/rankresults.html?../20181215163316Q2/20181215163316Q2, 10.07, 3,60, hate race trump
+15 December 201816:33:16, Q3,http://localhost:8000/rankresults.html?../20181215163316Q3/20181215163316Q3, 0, 0,0, 
+
+15 December 201818:01:15, Q1,http://localhost:8000/results2.html?../results/20181215180115Q1/20181215180115Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201818:01:15, Q2,http://localhost:8000/results2.html?../results/20181215180115Q2/20181215180115Q2, 10.07, 3,60, hate race trump
+15 December 201818:01:15, Q3,http://localhost:8000/results2.html?../results/20181215180115Q3/20181215180115Q3, 0, 0,0, 
+15 December 201818:52:45, Q1,http://localhost:8000/results2.html?../results/20181215185245Q1/20181215185245Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201818:52:45, Q2,http://localhost:8000/results2.html?../results/20181215185245Q2/20181215185245Q2, 10.07, 3,60, hate race trump
+15 December 201818:52:45, Q3,http://localhost:8000/results2.html?../results/20181215185245Q3/20181215185245Q3, 0, 0,0, 
+15 December 201818:53:16, Q1,http://localhost:8000/results2.html?../results/20181215185316Q1/20181215185316Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201818:53:16, Q2,http://localhost:8000/results2.html?../results/20181215185316Q2/20181215185316Q2, 10.07, 3,60, hate race trump
+15 December 201818:53:16, Q3,http://localhost:8000/results2.html?../results/20181215185316Q3/20181215185316Q3, 0, 0,0, 
+15 December 201818:55:51, Q1,http://localhost:8000/results2.html?../results/20181215185551Q1/20181215185551Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201818:57:02, Q1,http://localhost:8000/results2.html?../results/20181215185702Q1/20181215185702Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201818:57:02, Q2,http://localhost:8000/results2.html?../results/20181215185702Q2/20181215185702Q2, 10.07, 3,60, hate race trump
+15 December 201818:57:02, Q3,http://localhost:8000/results2.html?../results/20181215185702Q3/20181215185702Q3, 0, 0,0, 
+15 December 2018 19:04:37, Q1,http://localhost:63342/project_light-maste%2012-13%206pmr/project_light-master/html/RunRank.html?../results/20181215190437Q1/20181215190437Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 2018 19:04:37, Q2,http://localhost:8000/results2.html?../results/20181215190437Q2/20181215190437Q2, 10.07, 3,60, hate race trump
+15 December 2018 19:04:37, Q3,http://localhost:8000/results2.html?../results/20181215190437Q3/20181215190437Q3, 0, 0,0, 
+15 December 2018 21:49:55, Q1,http://localhost:8000/results2.html?../results/20181215214955Q1/20181215214955Q1, 30.699999999999996, 50,86, race hate kill black...(more)
+15 December 2018 21:49:55, Q2,http://localhost:8000/results2.html?../results/20181215214955Q2/20181215214955Q2, 13.049999999999999, 3,60, hate race trump
+15 December 2018 21:49:55, Q3,http://localhost:8000/results2.html?../results/20181215214955Q3/20181215214955Q3, 0, 0,0, 
+15 December 2018 21:49:55, Q4,http://localhost:8000/results2.html?../results/20181215214955Q4/20181215214955Q4, 13.049999999999999, 3,60, hate race trump
+15 December 2018 21:50:10, Q1,http://localhost:8000/results2.html?../results/20181215215010Q1/20181215215010Q1, 30.699999999999996, 50,86, race hate kill black...(more)
+15 December 2018 21:50:10, Q2,http://localhost:8000/results2.html?../results/20181215215010Q2/20181215215010Q2, 13.049999999999999, 3,60, hate race trump
+15 December 2018 21:50:10, Q3,http://localhost:8000/results2.html?../results/20181215215010Q3/20181215215010Q3, 0, 0,0, 
+15 December 2018 21:50:10, Q4,http://localhost:8000/results2.html?../results/20181215215010Q4/20181215215010Q4, 13.049999999999999, 3,60, hate race trump
+15 December 2018 21:51:24, Q1,http://localhost:8000/results2.html?../results/20181215215124Q1/20181215215124Q1, 121.72, 50,86, race hate kill black...(more)
+15 December 2018 21:51:24, Q2,http://localhost:8000/results2.html?../results/20181215215124Q2/20181215215124Q2, 10.07, 3,60, hate race trump
+15 December 2018 21:51:24, Q3,http://localhost:8000/results2.html?../results/20181215215124Q3/20181215215124Q3, 0, 0,0, 
+15 December 2018 21:51:24, Q4,http://localhost:8000/results2.html?../results/20181215215124Q4/20181215215124Q4, 10.07, 3,60, hate race trump
+15 December 2018 21:55:03, Q1,http://localhost:8000/results2.html?../results/20181215215503Q1/20181215215503Q1, 53.19, 50,86, race hate kill black...(more)
+15 December 2018 21:55:03, Q2,http://localhost:8000/results2.html?../results/20181215215503Q2/20181215215503Q2, 20.8, 3,60, hate race trump
+15 December 2018 21:55:03, Q3,http://localhost:8000/results2.html?../results/20181215215503Q3/20181215215503Q3, 0, 0,0, 
+15 December 2018 21:55:03, Q4,http://localhost:8000/results2.html?../results/20181215215503Q4/20181215215503Q4, 20.8, 3,60, hate race trump
+15 December 2018 21:59:15, Q1,http://localhost:8000/results2.html?../results/20181215215915Q1/20181215215915Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 2018 21:59:15, Q2,http://localhost:8000/results2.html?../results/20181215215915Q2/20181215215915Q2, 10.07, 3,60, hate race trump
+15 December 2018 21:59:15, Q3,http://localhost:8000/results2.html?../results/20181215215915Q3/20181215215915Q3, 0, 0,0, 
+15 December 2018 21:59:15, Q4,http://localhost:8000/results2.html?../results/20181215215915Q4/20181215215915Q4, 10.07, 3,60, hate race trump
+15 December 2018 21:59:47, Q1,http://localhost:8000/results2.html?../results/20181215215947Q1/20181215215947Q1, 121.72, 50,86, race hate kill black...(more)
+15 December 2018 21:59:47, Q2,http://localhost:8000/results2.html?../results/20181215215947Q2/20181215215947Q2, 10.07, 3,60, hate race trump
+15 December 2018 21:59:47, Q3,http://localhost:8000/results2.html?../results/20181215215947Q3/20181215215947Q3, 0, 0,0, 
+15 December 2018 21:59:47, Q4,http://localhost:8000/results2.html?../results/20181215215947Q4/20181215215947Q4, 10.07, 3,60, hate race trump
+15 December 2018 22:00:16, Q1,http://localhost:8000/results2.html?../results/20181215220016Q1/20181215220016Q1, 53.19, 50,86, race hate kill black...(more)
+15 December 2018 22:00:16, Q2,http://localhost:8000/results2.html?../results/20181215220016Q2/20181215220016Q2, 20.8, 3,60, hate race trump
+15 December 2018 22:00:16, Q3,http://localhost:8000/results2.html?../results/20181215220016Q3/20181215220016Q3, 0, 0,0, 
+15 December 2018 22:00:16, Q4,http://localhost:8000/results2.html?../results/20181215220016Q4/20181215220016Q4, 20.8, 3,60, hate race trump

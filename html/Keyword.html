@@ -6,11 +6,24 @@
 -->
 <html>
 	<head>
-		<title>Generic Page - Massively by HTML5 UP</title>
+		<title>Keyword Listing</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+          <style>
+            svg { width:100%; height: 100% }
+            table { border-collapse: collapse; color: #333; background-color: #F7F6F3; }
+            table thead { font-weight: bold; background-color: #CCC; cursor: default; }
+            table tbody tr:hover { background-color: orange; }
+            td { border: solid 1px #CCC; padding: 0 1ex; }
+            .even { color: #284775; background-color: White; }
+            .left { text-align: left; }
+            .right { text-align: right; }
+            .add { color: green; }
+            .minus { color: red; }
+          </style>
 	</head>
 	<body class="is-preload">
 
@@ -25,19 +38,13 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Project Light</a></li>
+							<li><a href="index.html">Project Light</a></li>
                             <li><a href="Overview.html">Project Overview</a></li>
-							<li><a href="Resutls.html">Search Results</a></li>
-							<li><a href="Keyword.html">Keyword</a></li>
+							<li><a href="Results.html">Search Results</a></li>
+							<li class="active"><a href="Keyword.html">Keyword</a></li>
                         	<li><a href="Matching.html">Matching</a></li>
 							<li><a href="AboutUs.html">About Us</a></li>
                             <li><a href="GettheCode.html">Get The Code</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -48,17 +55,15 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
-									<h1>This is a<br />
-									Generic Page</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<h1>System keyword Settings</h1>
+									<p>This page displayed the currently active keyword term weights and
+										the category assigned to each keyword.</p>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
-
+								</section>
+							  <div id="table">
+                                </div>
+						     <div id="chair">
+                                </div>
 					</div>
 
 				<!-- Footer -->
@@ -125,6 +130,75 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+    <script>
+     var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("&");
+        var filein =""
+        for (var i = 0; i < queries.length; i++)
+        {
+          document.write(queries[i] + "<br>");
+          filein = queries[i]+".weights";
+            document.write(filein);
+        }
 
+    filein = '../text/weightsview.txt'
+    var table = d3.select("#table").append("table"),
+    thead = table.append("thead"),
+    tbody = table.append("tbody");
+    thead.append("th").text("Term");
+    thead.append("th").text("Assigned Weight");
+
+    d3.csv(filein, function(error, data) {
+      if (error) throw error;
+      var tr = tbody.selectAll("tr")
+      		.data(data)
+      	.enter().append("tr")
+      		.classed("even", function(d, i) { return i % 2 == 1; });
+      tr.each(function(d) {
+       	var self = d3.select(this);
+       	self.append("td")
+            .html(d["term"]);
+        self.append("td")
+        	.html(d["weight"]);
+
+      });
+    });
+  </script>
+	<script>
+     var queryString2 = decodeURIComponent(window.location.search);
+        queryString2 = queryString2.substring(1);
+        var queries2 = queryString2.split("&");
+        var filein2 =""
+        for (var i = 0; i < queries2.length; i++)
+        {
+          document.write(queries2[i] + "<br>");
+          filein2 = queries2[i]+".weights";
+            document.write(filein2);
+        }
+
+    filein2 = '../text/hatetypeview.txt'
+    var chair = d3.select("#chair").append("table"),
+    thead2 = chair.append("thead"),
+    tbody2 = chair.append("tbody");
+    thead2.append("th").text("Term");
+    thead2.append("th").text("Assigned Category");
+
+    d3.csv(filein2, function(error, data2) {
+      if (error) throw error;
+      var tr2 = tbody2.selectAll("tr")
+      		.data(data2)
+      	.enter().append("tr")
+      		.classed("even", function(d, i) { return i % 2 == 1; });
+      tr2.each(function(d) {
+       	var self2 = d3.select(this);
+       	self2.append("td")
+            .html(d["term"]);
+        self2.append("td")
+        	.html(d["category"]);
+
+      });
+    });
+  </script>
 	</body>
 </html>

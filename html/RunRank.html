@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Search Results</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+          <style>
+            svg { width:100%; height: 100% }
+            table { border-collapse: collapse; color: #333; background-color: #F7F6F3; }
+            table thead { font-weight: bold; background-color: #CCC; cursor: default; }
+            table tbody tr:hover { background-color: orange; }
+            td { border: solid 1px #CCC; padding: 0 1ex; }
+            .even { color: #284775; background-color: White; }
+            .left { text-align: left; }
+            .right { text-align: right; }
+            .add { color: green; }
+            .minus { color: red; }
+          </style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Project Light</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Project Light</a></li>
+                            <li><a href="Results.html">Search Results</a></li>
+							<li class="active"><a href="RunRank.html.html">Query Results</a></li>
+							<li><a href="Keyword.html">Keyword</a></li>
+                        	<li><a href="Matching.html">Matching</a></li>
+							<li><a href="AboutUs.html">About Us</a></li>
+                            <li><a href="GettheCode.html">Get The Code</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">April 25, 2017</span>
+									<h1>Run Results<br />
+									        </h1>
+									<p>The table below contains a list of articles that contain on or more of the
+                                        query terms, ranked by their relevance using the frequency of the term and
+                                        the custom weights configured at the data was scaned.  You can view the
+                                        query terms used and associated weights at the bottom of the page.<br />
+                                        You may also view a detailed breakdown of terms found by document and the
+                                        meta categories by clicking on the links below <br />
+                                        <br />
+                                        <a href="RunCategory.html">Category Breakdown</a>
+                                        <br />
+                                        <a href="RunDetail.html">Details</a>
+                                        <br />
+                                    </p>
+								</header>
+								  <div id="table">
+                                </div>
+                                <div id="chair"></div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+    <script>
+     var queryString = decodeURIComponent(window.location.search);
+        queryString = queryString.substring(1);
+        var queries = queryString.split("&");
+        var filein =""
+        for (var i = 0; i < queries.length; i++)
+        {
+          document.write(queries[i] + "<br>");
+          filein = queries[i]+".rank";
+            document.write(filein);
+        }
+
+
+   // filein = '../results/20181215190437Q1/20181215190437Q1.rank'
+    var table = d3.select("#table").append("table"),
+    thead = table.append("thead"),
+    tbody = table.append("tbody");
+    thead.append("th").text("Rank");
+    thead.append("th").text("Score");
+    thead.append("th").text("Doc ID");
+    thead.append("th").text("Source");
+    thead.append("th").text("Title");
+
+    d3.csv(filein, function(error, data) {
+      if (error) throw error;
+      var tr = tbody.selectAll("tr")
+      		.data(data)
+      	.enter().append("tr")
+      		.classed("even", function(d, i) { return i % 2 == 1; });
+      tr.each(function(d) {
+       	var self = d3.select(this);
+       	self.append("td")
+            .html(d["ranking"])
+        self.append("td")
+        	.html(d["score"]);
+       	self.append("td")
+        	.html(d["docid"]);
+        self.append("td")
+            .html(d["source"].split('"').join(''));
+        self.append("td")
+            .html(d["title"].split('"').join(''));
+      });
+    });
+  </script>
+<script>
+     var queryString2 = decodeURIComponent(window.location.search);
+        queryString2 = queryString2.substring(1);
+        var queries2 = queryString2.split("&");
+        var filein2 =""
+        for (var i = 0; i < queries2.length; i++)
+        {
+          document.write(queries2[i] + "<br>");
+          filein2 = queries2[i]+".weights";
+            document.write(filein2);
+        }
+
+    //filein2 = '../text/hatetypeview.txt'
+    var chair = d3.select("#chair").append("table"),
+    thead2 = chair.append("thead"),
+    tbody2 = chair.append("tbody");
+    thead2.append("th").text("Doc");
+    thead2.append("th").text("Freq");
+    thead2.append("th").text("Score");
+
+    d3.csv(filein2, function(error, data2) {
+      if (error) throw error;
+      var tr2 = tbody2.selectAll("tr")
+      		.data(data2)
+      	.enter().append("tr")
+      		.classed("even", function(d, i) { return i % 2 == 1; });
+      tr2.each(function(d) {
+       	var self2 = d3.select(this);
+       	self2.append("td")
+            .html(d["doc"]);
+
+      });
+    });
+  </script>
+	</body>
+</html>

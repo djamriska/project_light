@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <style>
+    body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+    svg { width:100%; height: 100% }
+    table { border-collapse: collapse; color: #333; background-color: #F7F6F3; }
+    table thead { font-weight: bold; background-color: #CCC; cursor: default; }
+    table tbody tr:hover { background-color: #FFC; }
+    td { border: solid 1px #CCC; padding: 0 1ex; }
+    .even { color: #284775; background-color: White; }
+    .left { text-align: left; }
+    .right { text-align: right; }
+    .add { color: green; }
+    .minus { color: red; }
+  </style>
+</head>
+
+<body>
+  <div id="table">
+    </div>
+  <script>
+
+    var table = d3.select("#table").append("table"),
+        thead = table.append("thead"),
+        tbody = table.append("tbody");
+    thead.append("th").text("Date");
+    thead.append("th").text("Query #");
+    thead.append("th").text("Max");
+    thead.append("th").text("Terms");
+    thead.append("th").text("Docs");
+    thead.append("th").text("Query Terms")
+
+    d3.csv("../results/run_results.txt", function(error, data) {
+      if (error) throw error;
+      var tr = tbody.selectAll("tr")
+      		.data(data)
+      	.enter().append("tr")
+      		.classed("even", function(d, i) { return i % 2 == 1; });
+      tr.each(function(d) {
+       	var self = d3.select(this);
+        self.append("td")
+        	.append("a")
+        		.attr("href", d.ResultsLink)
+        		.text(d.Date);
+        self.append("td")
+        	.html(d["Query"]);
+        self.append("td")
+        	.html(d["Max"]);
+        self.append("td")
+        	.html(d["Terms"]);
+        self.append("td")
+        	.html(d["DocCount"]);
+        self.append("td")
+        	.html(d["QueryTerms"]);
+      });
+    });
+  </script>
+</body>

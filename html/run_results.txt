@@ -1,0 +1,7 @@
+Date,Query,ResultsLink,Max,Terms,DocCount,QueryTerms
+15 December 201816:33:16, Q1,http://localhost:8000/rankresults.html?../20181215163316Q1/20181215163316Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201816:33:16, Q2,http://localhost:8000/rankresults.html?../20181215163316Q2/20181215163316Q2, 10.07, 3,60, hate race trump
+15 December 201816:33:16, Q3,http://localhost:8000/rankresults.html?../20181215163316Q3/20181215163316Q3, 0, 0,0, 
+15 December 201816:33:31, Q1,http://localhost:58658/rankresults.html?../20181215163331Q1/20181215163331Q1, 29.13, 50,86, race hate kill black...(more)
+15 December 201816:33:31, Q2,http://localhost:58658/rankresults.html?../20181215163331Q2/20181215163331Q2, 10.07, 3,60, hate race trump
+15 December 201816:33:31, Q3,http://localhost:8000/rankresults.html?../20181215163331Q3/20181215163331Q3, 0, 0,0, 

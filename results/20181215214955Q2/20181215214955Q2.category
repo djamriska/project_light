@@ -1,0 +1,60 @@
+13, Primary: Threat, Count: 1 , Threat: 1
+26, Primary: Threat, Count: 2 , Threat: 1, Support: Person, Count: 1
+30, Primary: Threat, Count: 2 , Threat: 1
+45, Primary: Threat, Count: 1 , Threat: 1
+49, Primary: Person, Count: 3 , Threat: 1, Support: Threat, Count: 1
+53, Primary: Threat, Count: 1 , Threat: 1
+57, Primary: Threat, Count: 1 , Threat: 1
+58, Primary: Threat, Count: 3 , Threat: 1
+64, Primary: Threat, Count: 1 , Threat: 1
+67, Primary: Person, Count: 5 , Threat: 1, Support: Threat, Count: 1
+68, Primary: Person, Count: 3 , Threat: 1, Support: Threat, Count: 1
+69, Primary: Threat, Count: 2 , Threat: 1
+73, Primary: Person, Count: 4 , Threat: 1, Support: Threat, Count: 3
+75, Primary: Threat, Count: 1 , Threat: 1
+78, Primary: Threat, Count: 6 , Threat: 1, Support: Person, Count: 1
+87, Primary: Threat, Count: 2 , Threat: 1
+9, Primary: Threat, Count: 1 , Threat: 1, Support: Race, Count: 1, Support: Person, Count: 1
+92, Primary: Threat, Count: 1 , Threat: 1, Support: Race, Count: 1
+19, Primary: Race, Count: 1 , Threat: 0
+25, Primary: Race, Count: 1 , Threat: 0
+28, Primary: Race, Count: 2 , Threat: 0
+32, Primary: Race, Count: 1 , Threat: 0
+83, Primary: Race, Count: 1 , Threat: 0
+85, Primary: Race, Count: 3 , Threat: 0, Support: Person, Count: 2
+90, Primary: Race, Count: 1 , Threat: 0
+91, Primary: Race, Count: 1 , Threat: 0
+99, Primary: Race, Count: 1 , Threat: 0, Support: Person, Count: 1
+1, Primary: Person, Count: 2 , Threat: 0
+10, Primary: Person, Count: 3 , Threat: 0
+15, Primary: Person, Count: 4 , Threat: 0
+3, Primary: Person, Count: 1 , Threat: 0
+35, Primary: Person, Count: 1 , Threat: 0
+36, Primary: Person, Count: 3 , Threat: 0
+38, Primary: Person, Count: 7 , Threat: 0
+40, Primary: Person, Count: 2 , Threat: 0
+41, Primary: Person, Count: 4 , Threat: 0
+42, Primary: Person, Count: 2 , Threat: 0
+43, Primary: Person, Count: 2 , Threat: 0
+44, Primary: Person, Count: 1 , Threat: 0
+47, Primary: Person, Count: 3 , Threat: 0
+48, Primary: Person, Count: 1 , Threat: 0
+50, Primary: Person, Count: 2 , Threat: 0
+51, Primary: Person, Count: 3 , Threat: 0
+54, Primary: Person, Count: 1 , Threat: 0
+56, Primary: Person, Count: 2 , Threat: 0
+59, Primary: Person, Count: 17 , Threat: 0
+60, Primary: Person, Count: 2 , Threat: 0
+62, Primary: Person, Count: 2 , Threat: 0
+66, Primary: Person, Count: 9 , Threat: 0
+70, Primary: Person, Count: 1 , Threat: 0
+71, Primary: Person, Count: 2 , Threat: 0
+72, Primary: Person, Count: 1 , Threat: 0
+77, Primary: Person, Count: 2 , Threat: 0
+80, Primary: Person, Count: 2 , Threat: 0
+81, Primary: Person, Count: 1 , Threat: 0
+82, Primary: Person, Count: 3 , Threat: 0
+93, Primary: Person, Count: 2 , Threat: 0
+94, Primary: Person, Count: 2 , Threat: 0
+95, Primary: Person, Count: 4 , Threat: 0
+97, Primary: Person, Count: 1 , Threat: 0

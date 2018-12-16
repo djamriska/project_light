@@ -1,0 +1,86 @@
+19, Primary: Race, Count: 10 , Threat: 1, Support: Threat, Count: 1
+25, Primary: Race, Count: 1 , Threat: 0
+28, Primary: Race, Count: 3 , Threat: 0
+32, Primary: Race, Count: 7 , Threat: 1, Support: Threat, Count: 2
+83, Primary: Race, Count: 3 , Threat: 0
+85, Primary: Race, Count: 9 , Threat: 0, Support: Person, Count: 2
+9, Primary: Race, Count: 1 , Threat: 1, Support: Threat, Count: 1, Support: Person, Count: 1
+90, Primary: Race, Count: 12 , Threat: 0
+91, Primary: Race, Count: 14 , Threat: 0
+92, Primary: Race, Count: 17 , Threat: 1, Support: Threat, Count: 1
+99, Primary: Race, Count: 5 , Threat: 1, Support: Threat, Count: 1, Support: Person, Count: 1
+13, Primary: Threat, Count: 1 , Threat: 1
+26, Primary: Threat, Count: 4 , Threat: 1, Support: Race, Count: 1, Support: Person, Count: 1
+30, Primary: Threat, Count: 3 , Threat: 1, Support: Race, Count: 1, Support: Sexual, Count: 1
+45, Primary: Threat, Count: 2 , Threat: 1
+49, Primary: Race, Count: 4 , Threat: 1, Support: Person, Count: 3, Support: Threat, Count: 2
+53, Primary: Threat, Count: 1 , Threat: 1
+57, Primary: Race, Count: 7 , Threat: 1, Support: Threat, Count: 2
+58, Primary: Race, Count: 9 , Threat: 1, Support: Threat, Count: 3
+64, Primary: Race, Count: 9 , Threat: 1, Support: Threat, Count: 2
+67, Primary: Race, Count: 5 , Threat: 1, Support: Person, Count: 5, Support: Threat, Count: 1
+68, Primary: Person, Count: 3 , Threat: 1, Support: Race, Count: 2, Support: Threat, Count: 1
+69, Primary: Threat, Count: 2 , Threat: 1, Support: Race, Count: 1
+73, Primary: Race, Count: 6 , Threat: 1, Support: Person, Count: 4, Support: Threat, Count: 3
+75, Primary: Race, Count: 4 , Threat: 1, Support: Threat, Count: 1
+78, Primary: Race, Count: 12 , Threat: 1, Support: Threat, Count: 6, Support: Person, Count: 1
+87, Primary: Race, Count: 10 , Threat: 1, Support: Threat, Count: 4
+12, Primary: Threat, Count: 2 , Threat: 1
+2, Primary: Threat, Count: 1 , Threat: 1
+21, Primary: Threat, Count: 1 , Threat: 1
+29, Primary: Race, Count: 9 , Threat: 1, Support: Threat, Count: 1
+33, Primary: Threat, Count: 1 , Threat: 1
+35, Primary: Threat, Count: 3 , Threat: 1, Support: Person, Count: 1
+37, Primary: Threat, Count: 1 , Threat: 1, Support: Race, Count: 1
+39, Primary: Sexual, Count: 6 , Threat: 1, Support: Race, Count: 4, Support: Threat, Count: 1
+47, Primary: Person, Count: 3 , Threat: 1, Support: Threat, Count: 1
+60, Primary: Race, Count: 2 , Threat: 1, Support: Person, Count: 2, Support: Threat, Count: 1
+63, Primary: Race, Count: 16 , Threat: 1, Support: Threat, Count: 1
+65, Primary: Race, Count: 8 , Threat: 1, Support: Threat, Count: 1
+71, Primary: Race, Count: 3 , Threat: 1, Support: Person, Count: 2, Support: Threat, Count: 1
+74, Primary: Race, Count: 6 , Threat: 1, Support: Threat, Count: 3
+76, Primary: Threat, Count: 2 , Threat: 1
+81, Primary: Threat, Count: 2 , Threat: 1, Support: Race, Count: 1, Support: Person, Count: 1
+95, Primary: Race, Count: 14 , Threat: 1, Support: Threat, Count: 4, Support: Person, Count: 4
+96, Primary: Race, Count: 3 , Threat: 1, Support: Threat, Count: 2, Support: Sexual, Count: 1
+11, Primary: Race, Count: 2 , Threat: 0, Support: Sexual, Count: 1
+20, Primary: Race, Count: 4 , Threat: 0
+23, Primary: Race, Count: 2 , Threat: 0
+27, Primary: Race, Count: 7 , Threat: 0
+48, Primary: Race, Count: 1 , Threat: 0, Support: Person, Count: 1
+61, Primary: Race, Count: 4 , Threat: 0
+79, Primary: Race, Count: 6 , Threat: 0
+84, Primary: Race, Count: 2 , Threat: 0
+86, Primary: Race, Count: 22 , Threat: 0
+88, Primary: Race, Count: 11 , Threat: 0
+89, Primary: Race, Count: 9 , Threat: 0
+93, Primary: Race, Count: 9 , Threat: 0, Support: Person, Count: 2
+97, Primary: Race, Count: 2 , Threat: 0, Support: Sexual, Count: 2, Support: Person, Count: 1
+1, Primary: Race, Count: 3 , Threat: 0, Support: Person, Count: 2
+10, Primary: Person, Count: 3 , Threat: 0, Support: Race, Count: 2, Support: Sexual, Count: 1
+17, Primary: Race, Count: 1 , Threat: 0
+24, Primary: Race, Count: 4 , Threat: 0
+34, Primary: Race, Count: 4 , Threat: 0
+36, Primary: Person, Count: 3 , Threat: 0, Support: Race, Count: 1
+44, Primary: Race, Count: 1 , Threat: 0, Support: Person, Count: 1
+62, Primary: Person, Count: 2 , Threat: 0, Support: Race, Count: 1
+72, Primary: Race, Count: 3 , Threat: 0, Support: Person, Count: 1
+77, Primary: Person, Count: 2 , Threat: 0, Support: Race, Count: 1
+80, Primary: Person, Count: 2 , Threat: 0, Support: Race, Count: 1
+82, Primary: Person, Count: 3 , Threat: 0, Support: Race, Count: 1
+15, Primary: Person, Count: 4 , Threat: 0
+3, Primary: Person, Count: 1 , Threat: 0
+38, Primary: Person, Count: 7 , Threat: 0, Support: Race, Count: 2
+40, Primary: Person, Count: 2 , Threat: 0, Support: Race, Count: 2
+41, Primary: Race, Count: 5 , Threat: 0, Support: Person, Count: 4
+42, Primary: Person, Count: 2 , Threat: 0
+43, Primary: Person, Count: 2 , Threat: 0, Support: Race, Count: 1
+50, Primary: Person, Count: 2 , Threat: 0
+51, Primary: Person, Count: 3 , Threat: 0
+54, Primary: Person, Count: 1 , Threat: 0
+56, Primary: Person, Count: 2 , Threat: 0
+59, Primary: Person, Count: 17 , Threat: 0
+66, Primary: Person, Count: 9 , Threat: 0
+70, Primary: Person, Count: 1 , Threat: 0, Support: Sexual, Count: 1
+94, Primary: Person, Count: 2 , Threat: 0
+98, Primary: Sexual, Count: 4 , Threat: 0
