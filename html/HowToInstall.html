@@ -25,19 +25,15 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="Overview.html">Overview</a></li>
-							<li><a href="Results.html">Results</a></li>
-							<li><a href="Keyword.html">Keywords</a></li>
-                        	<li><a href="Matching.html">Analytics</a></li>
-							<li><a href="AboutUs.html">About Us</a></li>
-                            <li><a href="GettheCode.html">GitHub</a></li>
+							<li class="active"><a href="HowtoInstall.html">How to Install</a></li>
+							<li><a href="index.html">Project Light</a></li>
+							<li><a href="Results.html">Search Results</a></li>
+							<li><a href="keyword.html">Keywords</a></li>
+                        	<li><a href="Matching.html">Matching</a></li>
+							<li><a href="References.html">References</a></li>
+							<li><a href="https://github.com/djamriska/project_light">GitHub</a></li>
 						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
+
 					</nav>
 
 				<!-- Main -->
@@ -54,26 +50,60 @@
 									</p>
 								</header>
                                 <h2>Solution Overview</h2>
-                                <p>The following tools and technologies were used in the construction of this application.  Here is a lis tof the technologies and tools</p>
-                                <table><tr><th>Technology</th><th>Tools</th><th>Libraries</th><th>Algorithms</th></tr>
-                                <tr><td>Python</td><td>Visual Studio/Code</td><td>Pandas</td><td>BM25</td></tr>
-                                <tr><td>C#</td><td>PyCharm</td><td>Scrapy</td><td>BM25</td></tr>
-                                <tr><td>ASP.NET</td><td>Brackets</td><td>PyMongo</td></tr>
-                                <tr><td>.NET Framework</td><td>Excel</td><td>Juypter</td></tr>
-                                <tr><td>MongoDB</td><td>Compass</td><td>Anaconda</td></tr>
-                                <tr><td>JSON</td><td>Atlas</td><td>MetaPy</td></tr>
-                                <tr><td>BSON</td><td>Jira</td><td>NLTK</td></tr>
-                                <tr><td>HTML 5</td><td></td><td>Numpy</td></tr>
-                                <tr><td>JavaScript</td><td></td><td>BSON C# Mapper</td></tr>
-                                <tr><td>CSS</td><td></td><td></td></tr>
+                                <p>The following tools and technologies were used in the construction of this application.  Some items were dropped.  Here is a lis tof the technologies and tools.  Some of these features were removed in the end, but will be re-added</p>
+                                <table>
+                                <tr><td>Python</td><td>Visual Studio/Code</td><td>BM25</td></tr>
+                                <tr><td>PyCharm</td><td>Scrapy</td><td>MetaPy</td></tr>
+                                <tr><td>Brackets</td><td>HTML 5</td><td>Javascript</td></tr>
+                                <tr><td>Excel</td><td>Juypter</td><td>CSS</td></tr>
+                                <tr><td>Anaconda</td><td>JSON</td><td>D3</td></tr>
+                                <tr><td>Jira</td><td></td><td></td></tr>
+                                <tr></tr>
                                 </table>
                                 
+                                <h3>Project overview</h3>
+                                <p>Our project is a custom implementation of the BM25 ranking algorithm.  We have added a number of new features to the code base.</p>
+                                <p>We make use of the BM25 algorithm dervived from<a href=https://github.com/nhirakawa/BM25> https://github.com/nhirakawa/BM25</a>.
+                                Also, we present our result using a software, D3 (Data-Driven Documents), a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It allows us to visualize our final result for demonstraion. In particular we use the code here, <a href=https://bl.ocks.org/seemantk/3368f8c9b3d896965879>https://bl.ocks.org/seemantk/3368f8c9b3d896965879</a> to build our project.
+                                <br />
+                                <h3>
+                                    You can clone our respository at <a href="https://github.com/djamriska/project_light">Get the Code!</a>
+                                </h3>
+                                                        
+                                To run our code, PYTHON is required. The detailed installation guide can be found here, <a href=https://realpython.com/installing-python/>https://realpython.com/installing-python/</a>.
+                                <br/>
+                                The application can be run from the command line with a PYTHON shell, but we recommend the user make use of an IDE such as Visual Studio Code or PyCharm.  We perfer PyCharm as the integrated hints make working with PYTHON easy for the new developer.  Visual Studio Code is free, which makes that a compelling choice.  If you are a student you can request a 1 year free copy of PyCharm professional from JetBrains.  
                                 <h3>Database Setup</h3>
+                                We have removed the MongoDB portion of the application to make this easier on the end user, currently the files are stored in CSV or JSON files locally.<br/>
                                 <h3>Website Configuration</h3>
+                                In order to run the website you will need to have a local webserver.  PyCharm has one integrated into the shell, but you must set the default webserver to port 8000.  Alteratively you can use the http server that ships with Python (under the Anaconda distribution). We only know Windows machines, so you will need to perform a similar function with a Mac.
+                                <ul>
+                                    <li>Open a command prompt with Administrator rights</li>
+                                    <li>In the command prompt run <br/><b>python -V</b>
+                                        <br /> this allows you verify you are running Python.  Version should be 3.5 or later</li>
+                                    <li>Using the cd commands navigate to the location where you have installed the application </li>
+                                    <li>Navigate down one level cd html</li>
+                                    <li>Type in the follwing command exactly
+                                    <br />
+                                    <b>python -m http.server</b></li>
+                                    <li>Verify that it starts the server on port 8000</li>
+                                    <li>Click on <b>index.html</b></li>
+                                    
+                                    
+                            </ul>
+                        
                                 <h3>Setting up Keywords and Filters</h3>
-                                <h3>Website xPath setup</h3>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
+                                <p>The application ships with a default set of documents that allow you run the application right away.  These include
+                                a weights file, a query file, hate categories, a list of articles (100) and associated comments (~4000)</p>
+                                <p>Our project video at <a href="https://www.youtube.com/watch?v=B6pqG-pn5YI&t=">Project Light Overview</a> </p>
+                               
+								<p>
+                                    Source articles and comments are required to be in a specific format with leading ## symbols.  Please view the existing
+                                    comments and articles under text in order to see more detail.  
+                                    <br /><br />
+                                        
+                                    One interesting experiment for the end user is to add a custom word into a comments section and then update the weights and query to incorporate that term and see how changing weights for that term drive the position of the document.  We liked to use or own names and assign higher and lower weights.
+                                </p>
                                 <section>
                                     <ul>
                                     <li>

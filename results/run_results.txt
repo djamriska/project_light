@@ -47,3 +47,5 @@ Date,Query,ResultsLink,Max,Terms,DocCount,QueryTerms
 15 December 2018 22:00:16, Q2,http://localhost:8000/results2.html?../results/20181215220016Q2/20181215220016Q2, 20.8, 3,60, hate race trump
 15 December 2018 22:00:16, Q3,http://localhost:8000/results2.html?../results/20181215220016Q3/20181215220016Q3, 0, 0,0, 
 15 December 2018 22:00:16, Q4,http://localhost:8000/results2.html?../results/20181215220016Q4/20181215220016Q4, 20.8, 3,60, hate race trump
+16 December 2018 09:15:34, Q1,http://localhost:8000/results2.html?../results/20181216091534Q1/20181216091534Q1, 53.19, 50,86, race hate kill black...(more)
+16 December 2018 09:15:34, Q2,http://localhost:8000/results2.html?../results/20181216091534Q2/20181216091534Q2, 20.8, 3,60, hate race trump
