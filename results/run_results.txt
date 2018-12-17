@@ -49,3 +49,17 @@ Date,Query,ResultsLink,Max,Terms,DocCount,QueryTerms
 15 December 2018 22:00:16, Q4,http://localhost:8000/results2.html?../results/20181215220016Q4/20181215220016Q4, 20.8, 3,60, hate race trump
 16 December 2018 09:15:34, Q1,http://localhost:8000/results2.html?../results/20181216091534Q1/20181216091534Q1, 53.19, 50,86, race hate kill black...(more)
 16 December 2018 09:15:34, Q2,http://localhost:8000/results2.html?../results/20181216091534Q2/20181216091534Q2, 20.8, 3,60, hate race trump
+16 December 2018 15:58:26, Q1,http://results2.html?../results/20181216155826Q1/20181216155826Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 15:58:26, Q2,http://results2.html?../results/20181216155826Q2/20181216155826Q2,20.8,3,60,hate,race,trump
+16 December 2018 16:00:49, Q1,http://results2.html?../results/20181216160049Q1/20181216160049Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 16:00:49, Q2,http://results2.html?../results/20181216160049Q2/20181216160049Q2,20.8,3,60,hate,race,trump
+16 December 2018 16:10:12,Q1,http://results2.html?../results/20181216161012Q1/20181216161012Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 16:10:12,Q2,http://results2.html?../results/20181216161012Q2/20181216161012Q2,20.8,3,60,hate,race,trump
+16 December 2018 16:11:57,Q1,http://results2.html?../results/20181216161157Q1/20181216161157Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 16:11:57,Q2,http://results2.html?../results/20181216161157Q2/20181216161157Q2,20.8,3,60,hate,race,trump
+16 December 2018 16:12:26,Q1,http://results2.html?../results/20181216161226Q1/20181216161226Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 16:12:26,Q2,http://results2.html?../results/20181216161226Q2/20181216161226Q2,20.8,3,60,hate,race,trump
+16 December 2018 16:12:42,Q1,http://results2.html?../results/20181216161242Q1/20181216161242Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 16:12:42,Q2,http://results2.html?../results/20181216161242Q2/20181216161242Q2,20.8,3,60,hate,race,trump
+16 December 2018 16:13:03,Q1,http://results2.html?../results/20181216161303Q1/20181216161303Q1,53.19,50,86,race,hate,kill,black...(more)
+16 December 2018 16:13:03,Q2,http://results2.html?../results/20181216161303Q2/20181216161303Q2,20.8,3,60,hate,race,trump

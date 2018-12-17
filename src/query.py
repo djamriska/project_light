@@ -29,22 +29,38 @@ class QueryProcessor:
 				query_string_short = term_str
 				query_string_full = term_str
 			elif t_count >= 1 and t_count <= 3:
-				query_string_short += ' ' + term_str
+				query_string_short += ',' + term_str
 			elif t_count == 4:
 				query_string_short += '...(more)'
 			query_string_full += ', ' + term_str
 			t_count += 1
 		with open(query_result_file, mode='w') as qf:
-			qf.write(str(t_count) + ' query terms \n')
+
+			qf.write(str(t_count) + 'term \n')
 			qf.write(query_string_full)
 			qf.close()
 		return query_string_short
+
+	def write_weights_file_header(self, results_dir, query_run_count):
+		"""write the weights used for this run"""
+		weight_file = results_dir + '/' + self.file_runtime + 'Q' + str(query_run_count) + '.weights'
+		with open(weight_file, mode='w') as wf:
+			wf.write('term,weight\n')
+			wf.close()
+
 	def write_weights_file(self, results_dir, query_run_count, weight_string):
 		"""write the weights used for this run"""
 		weight_file = results_dir + '/' + self.file_runtime + 'Q' + str(query_run_count) + '.weights'
 		with open(weight_file, mode='a') as wf:
 			wf.write(weight_string)
 			wf.close()
+	def write_details_file_header(self, results_dir, query_run_count):
+		details_result_file = results_dir + '/' + self.file_runtime + 'Q' + str(
+			query_run_count) + '.details'  # ranked values by doc
+		with open(details_result_file, mode='w') as df:
+			df.write('doc,freq,score,term,weight,category\n')
+			df.close()
+
 	def write_details_file(self, results_dir, query_run_count,detail_string):
 		"""write out the line by line docit, term, freq, category for each run"""
 		details_result_file = results_dir + '/' + self.file_runtime + 'Q' + str(
@@ -57,7 +73,7 @@ class QueryProcessor:
 		"""write out the results of the run, docid, rank, score, title, etc"""
 		ranking_result_file = results_dir + '/' + self.file_runtime + 'Q' + str(query_run_count) + '.rank'  # ranked values by doc
 		with open(ranking_result_file, mode='w') as rf:
-			rf.write('docid,ranking,score,title,source,date,URLLink \n')
+			rf.write('docid,ranking,score,title,source,date,URLLink\n')
 			sorted_x = sorted(result.items(), key=operator.itemgetter(1))
 			sorted_x.reverse()
 			index = 0
@@ -75,8 +91,8 @@ class QueryProcessor:
 				#data.update({'docId': i[0], 'rank_score': j, 'Score': score, 'source': source, 'title': title,
 				#			 'pub_date': pub_date})
 
-				out_string = doc_id + ', ' + str(j) + ', ' + str(
-					round(score, 4)) + ', "' + title + '", "' + source + '", "' + pub_date + '", "' + pub_url + '"\n'
+				out_string = doc_id + ',' + str(j) + ',' + str(round(score, 4)) + ',"' + title + '","' + source \
+							 + '","' + pub_date + '","' + pub_url + '"\n'
 				# print(out_string)
 				rf.write(out_string)
 				index += 1
@@ -87,9 +103,9 @@ class QueryProcessor:
 		"""update the master list of runs used to load into D3"""
 		display_runtime = self.run_date.strftime("%d %B %Y %H:%M:%S")  # what to display in the rankings master file
 		with open("../results/run_results.txt", mode='a') as rf:  # todo: make 'a' this a for production
-			rf.write(display_runtime+', Q' + str(query_run_count) + ',http://localhost:8000/results2.html?'
-					+results_directory+'/'+self.file_runtime + 'Q' + str(query_run_count)+', '+str(max_score)
-					 +', '+str(t_count) + ','+str(doc_count)+', ' + query_string_short + '\n')
+			rf.write(display_runtime+',Q' + str(query_run_count) + ',http://results2.html?'
+					+results_directory+'/'+self.file_runtime + 'Q' + str(query_run_count)+','+str(max_score)
+					 +','+str(t_count) + ','+str(doc_count)+',' + query_string_short + '\n')
 		return True
 
 	def write_category_file(self, results_dir, query_run_count, doc_category_count):
@@ -97,6 +113,7 @@ class QueryProcessor:
 			query_run_count) + '.category'  # ranked values by type
 		print(category_result_file)
 		with open(category_result_file, mode='a') as cf:
+			cf.write('docId,primary,primary_count,threat_result,secondary\n')
 			for doc_id, cat_count_dict in doc_category_count.items():
 				# print('Doc #:', doc_id)
 				# print(cat_count_dict)
@@ -133,6 +150,8 @@ class QueryProcessor:
 		results = []
 		for query in self.queries:
 			results_dir = self.create_results_directory(query_run_count)
+			self.write_details_file_header(results_dir, query_run_count)
+			self.write_weights_file_header(results_dir, query_run_count)
 			short_query_string = self.create_query_short_string(query_run_count, query, results_dir)
 			term_count = len(query)
 			max_score = 0
@@ -169,7 +188,7 @@ class QueryProcessor:
 			else:
 				weight = 1
 				#  print('Term: {0} Weight:{1}'.format(term, weight))
-			weight_string =  term + ', ' + str(weight*100) + '\n'
+			weight_string = term + ',' + str(weight*100) + '\n'
 			self.write_weights_file(results_directory, query_run_count, weight_string)
 
 			if term in self.index:
@@ -197,8 +216,8 @@ class QueryProcessor:
 					else:
 						query_result[doc_id] = score
 					# print('\t docID: {0} Term: {3}  Freq: {1} Score:  {2}'.format(doc_id, freq, score, term))
-					detail_string = str(doc_id) + ', ' + str(freq) + ', ' + str(score) + ', ' + term + ', ' \
-									+ str(weight) + ', ' + keyword_type
+					detail_string = str(doc_id) + ',' + str(freq) + ',' + str(score) + ',' + term + ',' \
+									+ str(weight) + ',' + keyword_type
 					self.write_details_file(results_directory, query_run_count, detail_string)
 
 			# dump cat_count_dicts

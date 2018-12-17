@@ -74,6 +74,17 @@ def main():
            #     f.write(out_string)
             index += 1
         qid += 1
+        print('\n**The application has finished: You may view the results and supporting files in '
+              'the ../results directory for this run.\nEach query in the /text/query.txt file'
+              'will generate one directory with the format YYYYMMDDHHMMSSQ# with # being the query #.\n'
+              'Inside the director you will find the following files:\n\n'
+              'xxxxx.category - This file contains a record for each document showing the most prevelant category, the number\n'
+              '\t\tof occurances, if the document contained terms considered threatening and all additional categories and '
+              'their counts\nxxxxx.details - This file contains all documents, each term found and count and the weight applied'
+              'to the specific term found.  This is supporting for the analysis on how a document was ranked\n'
+              'xxxxx.query - This file contains the terms used for this query\nxxxxx.rank - this contains a list of all'
+              'documents that were ranked including their score, the source, title, date\nxxxxx.weights - this file'
+              'contains all of the terms found and the weights in effect at the time of the run.')
     # todo: setup the ability to pass K and b in as paramters
 
 
